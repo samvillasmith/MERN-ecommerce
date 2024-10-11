@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon backend/index.js",
+    "frontend": "cd frontend && npm run frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "keywords": [],
   "author": "",
@@ -35,5 +38,10 @@
     "react-router-dom": "^6.26.2",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
   }
 }
